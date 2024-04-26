@@ -11,13 +11,13 @@ async function sendMessages(urls, customText) {
         .get(`${url}${encodeURIComponent(customText)}`)
         .then((response) => {
           if (response.status === 200) {
-            return `Link ${index + 1}: OK`;
+            return `Bot ${index + 1}: OK TERKIRIM`;
           } else {
-            return `Link ${index + 1}: Unexpected status code: ${response.status}`;
+            return `Bot ${index + 1}: Unexpected status code: ${response.status}`;
           }
         })
         .catch((error) => {
-          return `Link ${index + 1}: API down!: ${error.message}`;
+          return `Bot ${index + 1}: API down!: ${error.message}`;
         })
     );
     const results = await Promise.allSettled(requests);
