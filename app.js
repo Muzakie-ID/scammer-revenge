@@ -40,7 +40,8 @@ async function main() {
       .split('\n');
     const customText = fs
       .readFileSync('pesan.txt', 'utf8')
-      .trim();
+      .trim()
+      .split('\n');
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     while (true) {
       await sendMessages(urls, customText);
