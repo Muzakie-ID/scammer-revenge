@@ -11,7 +11,7 @@ async function sendMessages(urls, customText) {
         .get(`${url}${encodeURIComponent(customText)}`)
         .then((response) => {
           if (response.status === 200) {
-            return `Bot ${index + 1}: OK TERKIRIM`;
+            return `Bot ${index + 1}: PESAN TERKIRIM`;
           } else {
             return `Bot ${index + 1}: Unexpected status code: ${response.status}`;
           }
@@ -25,7 +25,7 @@ async function sendMessages(urls, customText) {
       console.log(result.value);
     });
     totalMessagesSent++;
-    console.log(`Total messages sent: ${totalMessagesSent}`);
+    console.log(`Total Pesan Terkirim : ${totalMessagesSent}`);
     console.log('='.repeat(30));    
   } catch (error) {
     console.error('Error:', error.message);
